@@ -15,10 +15,6 @@ class Calculator:
             "/": 2,
         }
 
-    def _apply_operator(self, operators, values):
-        if not operators:
-            return
-
     def evaluate(self, expression):
         if not expression or expression.isspace():
             return None
@@ -52,7 +48,9 @@ class Calculator:
 
         return values[0]
 
-    
+    def _apply_operator(self, operators, values):
+        if not operators:
+            return
 
         operator = operators.pop()
         if len(values) < 2:
