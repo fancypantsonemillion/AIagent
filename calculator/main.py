@@ -1,9 +1,6 @@
-# calculator/main.py
-
 import sys
 from calculator import Calculator
 from pkg.render import format_json_output
-
 
 def main():
     calculator = Calculator()
